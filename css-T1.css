@@ -1,0 +1,142 @@
+/* =====================================================
+   CSS Selectors Playground
+   Each section below demonstrates one selector concept.
+===================================================== */
+
+/* =====================================================
+   1) Universal selector: selects EVERY element
+   - Use carefully; it applies globally.
+===================================================== */
+* {
+  /* This border is here just to visualize selection.
+     Remove it if you don't want outlines everywhere. */
+  outline: 0;
+}
+
+/* =====================================================
+   2) Type selector: selects all elements of a tag name
+   Example: all <a> links
+===================================================== */
+a {
+  font-size: 16px; /* Sets the font size for all links */
+}
+
+/* =====================================================
+   3) Descendant selector (space):
+   "div *" selects ALL elements inside ANY div (any depth).
+   This is stronger than relying on inheritance.
+===================================================== */
+div * {
+  color: green; /* Makes text green inside divs */
+}
+
+/* =====================================================
+   4) Grouping selectors (comma):
+   Applies the same rule to multiple selectors.
+   Here: links inside header AND links inside article.
+===================================================== */
+header a,
+article a {
+  color: red; /* Makes those links red */
+}
+
+/* =====================================================
+   5) Multiple classes (AND condition):
+   Select elements that have BOTH .price AND .new
+===================================================== */
+.price.new {
+  border: 1px solid green; /* Green 1px solid border */
+  padding: 0.2em 0.4em;
+}
+
+/* =====================================================
+   6) ID selector:
+   Select the element with id="autor"
+===================================================== */
+#autor {
+  font-weight: bold; /* Makes the author text bold */
+}
+
+/* =====================================================
+   7) Attribute selector:
+   Select all spans with lang="de"
+===================================================== */
+span[lang="de"] {
+  color: red; /* German spans become red */
+}
+
+/* =====================================================
+   8) Attribute selector (more specific):
+   Select only <input> elements with type="submit"
+===================================================== */
+input[type="submit"] {
+  background: yellow; /* Yellow background for submit button */
+  border: 1px solid #000;
+  padding: 0.4em 0.7em;
+  cursor: pointer;
+}
+
+/* =====================================================
+   9) Pseudo-element ::after
+   Adds visual content after each link without changing HTML.
+===================================================== */
+a::after {
+  content: " →"; /* Adds an arrow after every link */
+}
+
+/* =====================================================
+   10) Child selector (>):
+   Select only DIRECT li children of .linkliste
+===================================================== */
+.linkliste > li {
+  padding-left: 1em;
+}
+
+/* =====================================================
+   11) Element + class combination:
+   Select only <span> elements with class="preis"
+===================================================== */
+span.preis {
+  /* Notice: if another rule already sets color,
+     this will still apply based on specificity & order. */
+  text-decoration: underline;
+}
+
+/* =====================================================
+   Basic layout helpers (not part of the quiz concepts)
+   Just to make the page readable.
+===================================================== */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 24px;
+  line-height: 1.4;
+}
+
+.demo-section {
+  margin: 28px 0;
+  padding: 16px;
+  border: 1px dashed #ccc;
+}
+
+.muted {
+  opacity: 0.75;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.inner-box {
+  border: 1px dotted #aaa;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.site-footer {
+  margin-top: 40px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+}
+

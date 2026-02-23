@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Selectors — Practice Playground</title>
+
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- =====================================================
+       0) Page intro (just for context)
+  ====================================================== -->
+  <header class="site-header">
+    <h1>CSS Selectors Playground</h1>
+    <p class="muted">
+      This page contains small examples for common CSS selectors.
+      Use it to take screenshots and document each concept.
+    </p>
+
+    <!-- Links inside <header> (for "header a" grouping example) -->
+    <nav>
+      <a href="#section-classes">Go to Classes</a>
+      <a href="#section-attributes">Go to Attributes</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =====================================================
+         1) Class vs ID
+    ====================================================== -->
+    <section id="section-classes" class="demo-section">
+      <h2>1) Class vs ID</h2>
+
+      <!-- Class example -->
+      <p>
+        Price with class:
+        <span class="preis">99€</span>
+      </p>
+
+      <!-- ID example -->
+      <p>
+        Price with id:
+        <span id="preis">99€</span>
+      </p>
+
+      <!-- ID example from the quiz: #autor -->
+      <p id="autor">Author: Miriam</p>
+    </section>
+
+    <!-- =====================================================
+         2) Element + class AND multiple classes
+    ====================================================== -->
+    <section class="demo-section">
+      <h2>2) Element + class AND multiple classes</h2>
+
+      <p>
+        Only spans with class <code>preis</code>:
+        <span class="preis">Span.preis</span>
+      </p>
+
+      <p>
+        Two classes on the same element:
+        <span class="price new">I have .price and .new</span>
+      </p>
+
+      <p>
+        Same class on a different element type:
+        <em class="preis">This is em.preis</em>
+      </p>
+    </section>
+
+    <!-- =====================================================
+         3) Descendant selector vs child selector
+    ====================================================== -->
+    <section class="demo-section">
+      <h2>3) Descendant vs Child</h2>
+
+      <!-- This div is used to show: div * (everything inside a div) -->
+      <div class="box">
+        <h3>Inside a DIV</h3>
+        <p>
+          A paragraph inside a div.
+          <a href="#0">A link inside the div</a>
+        </p>
+
+        <div class="inner-box">
+          <p>
+            Nested content (still inside the outer div).
+            <span class="preis">Nested span</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- UL used for: .linkliste > li -->
+      <ul class="linkliste">
+        <li>99€</li>
+        <li>149€</li>
+      </ul>
+    </section>
+
+    <!-- =====================================================
+         4) Grouping selectors (header a, article a)
+    ====================================================== -->
+    <section class="demo-section">
+      <h2>4) Grouping selectors</h2>
+
+      <!-- Links inside <article> (for "article a" grouping example) -->
+      <article>
+        <h3>Links inside an article</h3>
+        <p>
+          <a href="#0">Article link</a>
+        </p>
+      </article>
+    </section>
+
+    <!-- =====================================================
+         5) Attribute selectors
+    ====================================================== -->
+    <section id="section-attributes" class="demo-section">
+      <h2>5) Attribute selectors</h2>
+
+      <!-- span[lang="de"] example -->
+      <p>
+        German span:
+        <span lang="de">Hallo Welt</span>
+      </p>
+
+      <p>
+        English span:
+        <span lang="en">Hello World</span>
+      </p>
+
+      <!-- input[type="submit"] example -->
+      <form action="#" method="post">
+        <input type="submit" value="senden" />
+      </form>
+    </section>
+
+    <!-- =====================================================
+         6) Links for ::after arrow demo
+    ====================================================== -->
+    <section class="demo-section">
+      <h2>6) Pseudo-element ::after</h2>
+      <p>
+        These links will display an arrow after them:
+        <a href="#0">One link</a>,
+        <a href="#0">Another link</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>End of playground.</p>
+  </footer>
+</body>
+</html>
